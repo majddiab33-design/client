@@ -1,0 +1,38 @@
+.heroCard {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.heroCardHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.badge {
+  background: #eee;
+  padding: 0.2rem 0.6rem;
+  border-radius: 20px;
+}
+
+.rating {
+  display: flex;
+  gap: 0.2rem;
+}
+
+.star {
+  color: gold;
+}
+
+.heroCardTags {
+  display: flex;
+  gap: 0.3rem;
+  margin: 0.5rem 0;
+}
+
+.heroCardFooter {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}

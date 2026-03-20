@@ -1,0 +1,256 @@
+.page {
+  background: #f5f5f7;
+  font-family: sans-serif;
+  direction: rtl;
+
+}
+
+
+
+.main {
+  margin: auto;
+  padding: 1.5rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 2rem;
+}
+
+.heroText h1 {
+  font-size: 2.4rem;
+}
+
+.primary {
+  color: #ff6b35;
+}
+
+.heroTags {
+  display: flex;
+  gap: 0.4rem;
+  margin: 1rem 0;
+}
+
+.tag {
+  background: white;
+  padding: 0.3rem 0.7rem;
+  border-radius: 20px;
+  border: 1px solid #eee;
+}
+
+.heroSearch {
+  background: white;
+  padding: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.heroSearchTop {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 0.5rem 0.9rem;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+}
+
+.heroFilters {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+}
+
+.filter {
+  background: #f3f3f5;
+  padding: 0.25rem 0.7rem;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.activeFilter {
+  background: rgba(255, 107, 53, 0.15);
+  color: #ff6b35;
+}
+
+.featuresSection {
+  background: #f5f5f7;
+  padding: 60px 20px;
+  direction: rtl;
+  font-family: "Assistant", sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+   color: #555;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid #ff6b35;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: 0.2s ease;
+}
+
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.hh{
+  height: 400px;
+  width: 200px;
+}
+
+.spacer {
+  height: 35px;
+}
+
+.spacer2 {
+  height: 70px;
+}
+
+.reviewsSection {
+  background: #f7f7f7;
+  padding: 60px 20px;
+  direction: rtl;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.reviewCard {
+  background: #fff;
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid #ff6b35;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.text {
+  color: #444;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.user {
+  color: #ff6b35;
+  font-weight: 600;
+}
+
+.footer {
+  background: #ffffff;
+  border-top: 4px solid #ff7a00;
+  padding: 50px 20px 0;
+  direction: rtl;
+  font-family: "Assistant", sans-serif;
+}
+
+.footerContainer {
+  
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 40px;
+}
+
+.logoArea {
+  text-align: right;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ff7a00;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  color: #555;
+  line-height: 1.6;
+}
+
+.links h3,
+.about h3 {
+  color: #ff7a00;
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.links li {
+  margin-bottom: 8px;
+  color: #444;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.links li:hover {
+  color: #ff7a00;
+}
+
+.about p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.bottomBar {
+  margin-top: 40px;
+  padding: 15px 0;
+  text-align: center;
+  background: #ff7a00;
+  color: #fff;
+  font-size: 0.95rem;
+}

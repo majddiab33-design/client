@@ -1,0 +1,32 @@
+'use client';
+import React, { useState, useEffect } from "react";
+import AttractionsList from "../components/AttractionComp/AttractionsList";
+import NavBar from "../components/NavBar";
+
+import styles from "./page.module.css";
+
+export default function AttractionPage() {
+  const [attractions, setAttractions] = useState([]);
+
+  useEffect(() => {
+    async function fetchAttractions() {
+      try {
+        const response = await fetch("http://localhost:5000/api/attraction");
+        const data = await response.json();
+        console.log(data);
+        setAttractions(data);
+      } catch (error) {
+        console.error("Error fetching attractions:", error);
+      }
+    }
+    fetchAttractions();
+  }, []);
+
+  return (
+    <div className={styles.page}>
+      <NavBar />
+      <h1 className={styles.title}>האטרקציות הכי נפוצות בארץ</h1>
+      <AttractionsList attractions={attractions} />
+    </div>
+  );
+}

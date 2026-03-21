@@ -12,7 +12,7 @@ export default function Search() {
     
 
     for (const endpoint of endpoints) {
-        const response = await fetch(`http://localhost:5000/api/${endpoint}/${searchTerm}`);
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/${endpoint}/${searchTerm}`);
 
         if (response.ok) {
             const data = await response.json();

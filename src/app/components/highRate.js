@@ -27,7 +27,7 @@ export default function HighRate() {
             let best = null;
 
             for (const endpoint of endpoints) {
-                const response = await fetch(`http://localhost:5000/api/${endpoint}/highRate`);
+                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/${endpoint}/highRate`);
                 const data = await response.json();
 
                 let item = null;

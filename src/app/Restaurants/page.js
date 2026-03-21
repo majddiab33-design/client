@@ -11,7 +11,7 @@ export default function RestaurantPage() {
   useEffect(() => {
     async function fetchRestaurants() {
       try {
-        const response = await fetch("http://localhost:5000/api/restaurant");
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/restaurant`);
         const data = await response.json();
         console.log(data);
         setRestaurants(data);

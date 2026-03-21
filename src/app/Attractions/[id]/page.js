@@ -19,7 +19,7 @@ export default function cardPage({ params }) {
     useEffect(() => {
         const getCardData = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/api/attraction/itemId/${id}`);
+                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/attraction/itemId/${id}`);
                 const data = await response.json();
                 setCardData(data);
             } catch (error) {

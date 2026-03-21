@@ -62,7 +62,7 @@ export default function AddRecommendation({isLoggedIn}) {
     }
 
     try {
-      const res = await fetch(`http://localhost:5000/api/${recomType}/add`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/${recomType}/add`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(content),

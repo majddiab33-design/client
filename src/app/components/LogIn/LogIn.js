@@ -22,7 +22,7 @@ export default function Home({ setIsLoggedIn, isLoggedIn }) {
       }
 
       try {
-        const res = await fetch("http://localhost:5000/api/auth/me", {
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/auth/me`, {
           headers: { Authorization: `Bearer ${token}` }
         });
 
@@ -45,7 +45,7 @@ export default function Home({ setIsLoggedIn, isLoggedIn }) {
 
   const handleLogin = async () => {
     try {
-      const res = await fetch("http://localhost:5000/api/login", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/login`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -86,7 +86,7 @@ export default function Home({ setIsLoggedIn, isLoggedIn }) {
     }
 
     try {
-      const res = await fetch("http://localhost:5000/api/login/sign-up", {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/login/sign-up`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",

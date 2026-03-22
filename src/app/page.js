@@ -4,6 +4,7 @@ import Search from "./components/Search";
 import HighRate from "./components/highRate";
 
 export default function Home() {
+  console.log("API URL:", process.env.NEXT_PUBLIC_API_URL);
   return (
     <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }} className={styles.page}>
       <NavBar />

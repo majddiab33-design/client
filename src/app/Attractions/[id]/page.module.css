@@ -58,3 +58,27 @@
     padding: 15px;
     border-radius: 8px;
 }
+
+.hoursSection {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f7f7f7;
+  border-radius: 8px;
+}
+
+.hoursTitle {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.hoursList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hoursItem {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}

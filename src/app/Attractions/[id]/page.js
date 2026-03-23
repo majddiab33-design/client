@@ -36,6 +36,10 @@ export default function cardPage({ params }) {
             <h1 className={styles.name}>{cardData.attr_name}</h1>
             <img
                 src={cardData.attr_image}
+                onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = "https://placehold.co/400";
+                }}
                 alt={cardData.attr_name}
                 className={styles.image}
             />

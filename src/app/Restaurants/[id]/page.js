@@ -36,11 +36,27 @@ export default function cardPage({ params }) {
             <h1 className={styles.name}>{cardData.res_name}</h1>
             <img
                 src={cardData.res_image}
+                onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = "https://placehold.co/400";
+                }}
                 alt={cardData.res_name}
                 className={styles.image}
             />
             <p className={styles.rate}>⭐{cardData.res_rate}</p>
             <p className={styles.description}>{cardData.res_description}</p>
+
+            <div className={styles.hoursSection}>
+                <h3 className={styles.hoursTitle}>שעות פתיחה</h3>
+                <ul className={styles.hoursList}>
+                    {Object.entries(cardData.res_hours).map(([day, hours]) => (
+                        <li key={day} className={styles.hoursItem}>
+                            <strong>{day}:</strong> {hours}
+                        </li>
+                    ))}
+                </ul>
+            </div>
+
         </div>
     );
 }

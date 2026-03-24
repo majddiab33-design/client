@@ -2,9 +2,11 @@ import styles from "./page.module.css";
 import NavBar from "./components/NavBar";
 import Search from "./components/Search";
 import HighRate from "./components/highRate";
+import { usePathname } from "next/navigation";
 
 export default function Home() {
   console.log("API URL:", process.env.NEXT_PUBLIC_API_URL);
+  const pathname = usePathname();
   return (
     <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }} className={styles.page}>
       <NavBar />

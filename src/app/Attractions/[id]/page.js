@@ -49,7 +49,7 @@ export default function cardPage({ params }) {
                 src={cardData.attr_image}
                 onError={(e) => {
                     e.target.onerror = null;
-                    e.target.src = "https://placehold.co/400";
+                    e.target.src = "/defaultImg.png";
                 }}
                 alt={cardData.attr_name}
                 className={styles.image}

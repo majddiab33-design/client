@@ -50,7 +50,7 @@ export default function cardPage({ params }) {
                 src={cardData.trip_image}
                 onError={(e) => {
                     e.target.onerror = null;
-                    e.target.src = "https://placehold.co/400";
+                    e.target.src = "/defaultImg.png";
                 }}
                 alt={cardData.trip_name}
                 className={styles.image}

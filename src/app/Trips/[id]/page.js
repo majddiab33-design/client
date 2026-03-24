@@ -13,9 +13,20 @@ export default function cardPage({ params }) {
         trip_name: "",
         trip_rate: "",
         trip_description: "",
-        trip_image: "https://placehold.co/400",
-        trip_open:""
+        trip_image: "..../defaultImg.png",
+        trip_open: ""
     });
+
+    const dayOrder = [
+        "sunday",
+        "monday",
+        "tuesday",
+        "wednesday",
+        "thursday",
+        "friday",
+        "saturday"
+    ];
+
 
     useEffect(() => {
         const getCardData = async () => {
@@ -47,16 +58,19 @@ export default function cardPage({ params }) {
             <p className={styles.rate}>⭐{cardData.trip_rate}</p>
             <p className={styles.description}>{cardData.trip_description}</p>
 
-             <div className={styles.hoursSection}>
+            <div className={styles.hoursSection}>
                 <h3 className={styles.hoursTitle}>שעות פתיחה</h3>
                 <ul className={styles.hoursList}>
-                    {Object.entries(cardData.trip_open).map(([day, hours]) => (
-                        <li key={day} className={styles.hoursItem}>
-                            <strong>{day}:</strong> {hours}
-                        </li>
-                    ))}
+                    {Object.entries(cardData.trip_open)
+                        .sort(([dayA], [dayB]) => dayOrder.indexOf(dayA) - dayOrder.indexOf(dayB))
+                        .map(([day, hours]) => (
+                            <li key={day} className={styles.hoursItem}>
+                                <strong>{day}:</strong> {hours}
+                            </li>
+                        ))}
                 </ul>
             </div>
+
         </div>
     );
 }

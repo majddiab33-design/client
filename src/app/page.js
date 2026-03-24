@@ -116,10 +116,15 @@ export default function Home() {
             <div className={styles.links}>
               <h3>ניווט מהיר</h3>
               <ul>
-                <li>מסעדות</li>
-                <li>אטרקציות</li>
-                <li>טיולים</li>
-                <li>מקומות קרובים</li>
+                <li>
+                  <a href="/Restaurants" className={pathname === "/Restaurants" ? styles.active : ""}>מסעדות</a>
+                </li>
+                <li>
+                   <a href="/Attractions" className={pathname === "/Attractions" ? styles.active : ""}>אטרקציות</a>
+                </li>
+                <li>
+                  <a href="/Trips" className={pathname === "/Trips" ? styles.active : ""}>טיולים</a>
+                </li>
               </ul>
             </div>
 

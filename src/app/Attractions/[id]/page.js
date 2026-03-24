@@ -13,7 +13,8 @@ export default function cardPage({ params }) {
         attr_name: "",
         attr_rate: "",
         attr_description: "",
-        attr_image: "https://placehold.co/400"
+        attr_image: "https://placehold.co/400",
+        attr_open:""
     });
 
     useEffect(() => {

@@ -13,7 +13,8 @@ export default function cardPage({ params }) {
         res_name: "",
         res_rate: "",
         res_description: "",
-        res_image: "https://placehold.co/400"
+        res_image: "https://placehold.co/400",
+        res_open:""
     });
 
     useEffect(() => {

@@ -13,7 +13,8 @@ export default function cardPage({ params }) {
         trip_name: "",
         trip_rate: "",
         trip_description: "",
-        trip_image: "https://placehold.co/400"
+        trip_image: "https://placehold.co/400",
+        trip_open:""
     });
 
     useEffect(() => {

@@ -49,7 +49,7 @@ export default function cardPage({ params }) {
              <div className={styles.hoursSection}>
                 <h3 className={styles.hoursTitle}>שעות פתיחה</h3>
                 <ul className={styles.hoursList}>
-                    {Object.entries(cardData.res_hours).map(([day, hours]) => (
+                    {Object.entries(cardData.trip_open).map(([day, hours]) => (
                         <li key={day} className={styles.hoursItem}>
                             <strong>{day}:</strong> {hours}
                         </li>

@@ -1,3 +1,4 @@
+"use client"
 import styles from "./page.module.css";
 import NavBar from "./components/NavBar";
 import Search from "./components/Search";

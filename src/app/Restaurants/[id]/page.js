@@ -13,7 +13,7 @@ export default function cardPage({ params }) {
         res_name: "",
         res_rate: "",
         res_description: "",
-        res_image: "..../defaultImg.png",
+        res_image: "/defaultImg.png",
         res_open: ""
     });
 

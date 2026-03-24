@@ -13,7 +13,7 @@ export default function cardPage({ params }) {
         attr_name: "",
         attr_rate: "",
         attr_description: "",
-        attr_image: "..../defaultImg.png",
+        attr_image: "/defaultImg.png",
         attr_open:""
     });
 

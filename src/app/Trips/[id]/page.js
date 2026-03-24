@@ -13,7 +13,7 @@ export default function cardPage({ params }) {
         trip_name: "",
         trip_rate: "",
         trip_description: "",
-        trip_image: "..../defaultImg.png",
+        trip_image: "/defaultImg.png",
         trip_open: ""
     });
 

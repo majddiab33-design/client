@@ -10,7 +10,7 @@ export default function AttractionsCard({ id, name, rate, image }) {
                     src={image}
                     onError={(e) => {
                         e.target.onerror = null;
-                        e.target.src = "https://placehold.co/400";
+                        e.target.src = "/defaultImg.png";
                     }}
                     alt={name}
                     className={styles.cardImage}

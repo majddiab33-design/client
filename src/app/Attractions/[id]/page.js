@@ -3,9 +3,10 @@
 import { use } from "react";
 import styles from "./page.module.css";
 import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export default function cardPage({ params }) {
-
+    const pathname = usePathname();
     const { id } = use(params);  // <-- unwrap the Promise
 
     const [cardData, setCardData] = useState({
@@ -14,10 +15,10 @@ export default function cardPage({ params }) {
         attr_rate: "",
         attr_description: "",
         attr_image: "/defaultImg.png",
-        attr_open:""
+        attr_open: ""
     });
 
-      const dayOrder = [
+    const dayOrder = [
         "sunday",
         "monday",
         "tuesday",
@@ -43,6 +44,11 @@ export default function cardPage({ params }) {
 
     return (
         <div className={styles.page}>
+            <button
+                className={`${styles.backTo} ${pathname === "/Restaurants" ? styles.active : ""}`}
+            >
+                ➔
+            </button>
             <h2 className={styles.title}>אטרקציות</h2>
             <h1 className={styles.name}>{cardData.attr_name}</h1>
             <img
@@ -57,7 +63,7 @@ export default function cardPage({ params }) {
             <p className={styles.rate}>⭐{cardData.attr_rate}</p>
             <p className={styles.description}>{cardData.attr_description}</p>
 
-            
+
             <div className={styles.hoursSection}>
                 <h3 className={styles.hoursTitle}>שעות פתיחה</h3>
                 <ul className={styles.hoursList}>

@@ -8,6 +8,7 @@ import AddRecommendation from "./Recommendation/AddRecommendation";
 export default function NavBar() {
     const pathname = usePathname();
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [menuOpen,setMenuOpen] = useState(false);
 
     return (
         <div>

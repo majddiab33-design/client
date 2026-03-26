@@ -7,7 +7,7 @@ import styles from "./page.module.css";
 
 export default function TripPage() {
   const [trips, setTrips] = useState([]);
-  const [loading,setLoading]= useState(true);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchTrips() {
@@ -24,8 +24,12 @@ export default function TripPage() {
     fetchTrips();
   }, []);
 
-   if (loading){
-    <div> <h2 className={styles.loadScreen}>loading...</h2></div>
+  if (loading) {
+    return (
+      <div>
+        <h2 className={styles.loadScreen}>loading...</h2>
+      </div>
+    );
   }
 
   return (

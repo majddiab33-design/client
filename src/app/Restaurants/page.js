@@ -25,7 +25,11 @@ export default function RestaurantPage() {
   }, []);
 
   if (loading) {
-    <div> <h2 className={styles.loadScreen}>loading...</h2></div>
+    return (
+      <div>
+        <h2 className={styles.loadScreen}>loading...</h2>
+      </div>
+    );
   }
 
   return (

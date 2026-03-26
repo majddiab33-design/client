@@ -14,7 +14,7 @@ export default function AttractionPage() {
       try {
         const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/attraction`);
         const data = await response.json();
-        setLoading(flase);
+        setLoading(false);
         console.log(data);
         setAttractions(data);
       } catch (error) {
@@ -25,7 +25,11 @@ export default function AttractionPage() {
   }, []);
 
   if (loading) {
-    <div> <h2 className={styles.loadScreen}>loading...</h2></div>
+    return (
+      <div>
+        <h2 className={styles.loadScreen}>loading...</h2>
+      </div>
+    );
   }
 
   return (

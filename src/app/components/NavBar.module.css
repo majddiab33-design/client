@@ -42,11 +42,9 @@
   cursor: pointer;
 }
 
-.navLinks :hover {
+.navLinks a:hover {
   color: #ff6b35;
-  
 }
-
 
 .active {
   color: #ff6b35;
@@ -91,7 +89,7 @@
 }
 
 /* כשהתפריט פתוח */
-.mobileMenu.open {
+.open {
   display: flex;
 }
 

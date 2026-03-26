@@ -4,17 +4,18 @@
   background: rgba(245, 245, 247, 0.9);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid #ddd;
-  z-index: 1000 ;
+  z-index: 1000;
 }
 
 .nav {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
+  padding: 1rem 2rem;
 }
 
+/* לוגו */
 .logo {
-  flex: 1;
   display: flex;
   gap: 0.4rem;
   font-weight: bold;
@@ -31,8 +32,8 @@
   color: white;
 }
 
+/* קישורים */
 .navLinks {
-  flex: 2;
   display: flex;
   gap: 1rem;
 }
@@ -51,9 +52,8 @@
   border-bottom: 2px solid #ff6b35;
 }
 
+/* כפתורים */
 .navCta {
-  flex: 1;
-  align-content: center;
   display: flex;
   gap: 0.6rem;
 }
@@ -80,26 +80,25 @@
   cursor: pointer;
 }
 
+/* תפריט מובייל */
 .mobileMenu {
-  display: flex;
-  align-items: center;
-  gap: 1rem; /* במקום 7rem */
+  display: none;
 }
 
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
+  .nav {
+    grid-template-columns: auto 1fr auto;
+    padding: 0.8rem 1rem;
+  }
+
   .mobileMenuBtn {
     display: block;
   }
 
-  .nav {
-    padding: 0.8rem 1rem;
-  }
-
-  @media (max-width: 768px) {
   .mobileMenu {
-    display: flex; /* חשוב */
+    display: flex;
     position: absolute;
     top: 60px;
     left: 0;
@@ -117,9 +116,7 @@
 
     transition: all 0.3s ease;
   }
-}
 
-  /* כשהתפריט פתוח */
   .mobileMenu.open {
     max-height: 500px;
     opacity: 1;
@@ -127,7 +124,6 @@
     pointer-events: auto;
   }
 
-  /* קישורים */
   .navLinks {
     flex-direction: column;
     width: 100%;
@@ -140,7 +136,6 @@
     border-bottom: 1px solid #eee;
   }
 
-  /* כפתורים */
   .navCta {
     flex-direction: column;
     width: 100%;

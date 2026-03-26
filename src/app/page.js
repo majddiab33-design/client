@@ -30,9 +30,11 @@ export default function Home() {
 
   if (loading) {
     return (
-      <div>
-        <div className={styles.loadScreen}>a few second until the server wake up</div>
-        <div class="spinner"></div>
+      <div className={styles.loadScreen}>
+        <div className={styles.loaderContent}>
+          <div className={styles.spinner}></div>
+          <p>Loading, please wait...</p>
+        </div>
       </div>
     )
 

@@ -299,25 +299,10 @@ body {
 
 @media (max-width: 768px) {
 
-  .loadScreen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 768px;
-    height: 100vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(8px);
-    color: #333;
-    font-size: 1.5rem;
-    font-weight: 500;
-
-    z-index: 9999;
-    /* stays above everything */
+   .loadScreen {
+    font-size: 1.1rem; /* smaller text */
+    padding: 20px;
+    text-align: center;
   }
 
   /* כללי */

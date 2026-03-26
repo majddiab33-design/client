@@ -4,15 +4,15 @@ import NavBar from "./components/NavBar";
 import Search from "./components/Search";
 import HighRate from "./components/highRate";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 export default function Home() {
-  backendConnect;
   const [loading, setLoading] = useState(true);
 
   console.log("API URL:", process.env.NEXT_PUBLIC_API_URL);
   const pathname = usePathname();
-
+  
+  useEffect(() => {
   const backendConnect = async () => {
     try {
       const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/connect`);
@@ -27,6 +27,8 @@ export default function Home() {
       return null;
     }
   };
+  backendConnect;
+  }, []);
 
   if (loading) {
     return <div className={styles.loadScreen}>a few second until the server wake up</div>

@@ -72,3 +72,42 @@
   padding: 0.45rem 1rem;
   border-radius: 20px;
 }
+
+/* כפתור המבורגר */
+.mobileMenuBtn {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* תפריט במובייל */
+.mobileMenu {
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  background: rgba(245, 245, 247, 0.95);
+  padding: 1rem;
+  border-top: 1px solid #ddd;
+}
+
+/* כשהתפריט פתוח */
+.mobileMenu.open {
+  display: flex;
+}
+
+/* התאמות למסכים קטנים */
+@media (max-width: 768px) {
+  .nav {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .navLinks,
+  .navCta {
+    display: none; /* מסתיר את התפריט הרגיל */
+  }
+
+  .mobileMenuBtn {
+    display: block; /* מציג את ההמבורגר */
+  }
+}

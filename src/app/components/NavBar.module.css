@@ -80,9 +80,10 @@
   cursor: pointer;
 }
 
-/* תפריט מובייל */
 .mobileMenu {
-  display: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* במקום 7rem */
 }
 
 /* ================= MOBILE ================= */

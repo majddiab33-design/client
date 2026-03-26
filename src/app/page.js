@@ -9,7 +9,6 @@ import { useState,useEffect } from "react";
 export default function Home() {
   const [loading, setLoading] = useState(true);
 
-  console.log("API URL:", process.env.NEXT_PUBLIC_API_URL);
   const pathname = usePathname();
   
   useEffect(() => {
@@ -24,10 +23,9 @@ export default function Home() {
     } catch (error) {
       console.error("Connection failed:", error);
       setLoading(false);
-      return null;
     }
   };
-  backendConnect;
+  backendConnect();
   }, []);
 
   if (loading) {

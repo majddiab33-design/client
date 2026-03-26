@@ -32,8 +32,8 @@ export default function Home() {
     return (
       <div className={styles.loadScreen}>
         <div className={styles.loaderContent}>
-          <div className={styles.spinner}></div>
           <p>Loading, please wait...</p>
+          <div className={styles.spinner}></div>
         </div>
       </div>
     )

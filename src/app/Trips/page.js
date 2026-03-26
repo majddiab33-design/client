@@ -28,13 +28,12 @@ export default function TripPage() {
   return (
     <div className={styles.page}>
       <NavBar />
+      <h1 className={styles.title}>הטיולים הכי נפוצות בארץ</h1>
       {loading && (
         <div>
           <h2 className={styles.loadScreen}>loading...</h2>
         </div>
       )}
-
-      <h1 className={styles.title}>הטיולים הכי נפוצות בארץ</h1>
       <TripList trips={trips} />
     </div>
   );

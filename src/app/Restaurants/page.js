@@ -28,13 +28,13 @@ export default function RestaurantPage() {
   return (
     <div className={styles.page}>
       <NavBar />
-      {loading && (
+      <h1 className={styles.title}>המסעדות הכי נפוצות בארץ</h1>
+       {loading && (
         <div>
           <h2 className={styles.loadScreen}>loading...</h2>
         </div>
       )}
 
-      <h1 className={styles.title}>המסעדות הכי נפוצות בארץ</h1>
       <RestaurantsList restaurants={restaurants} />
     </div>
   );

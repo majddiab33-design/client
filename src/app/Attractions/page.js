@@ -28,13 +28,12 @@ export default function AttractionPage() {
   return (
     <div className={styles.page}>
       <NavBar />
+      <h1 className={styles.title}>האטרקציות הכי נפוצות בארץ</h1>
       {loading && (
         <div>
           <h2 className={styles.loadScreen}>loading...</h2>
         </div>
       )}
-
-      <h1 className={styles.title}>האטרקציות הכי נפוצות בארץ</h1>
       <AttractionsList attractions={attractions} />
     </div>
   );

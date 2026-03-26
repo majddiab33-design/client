@@ -4,32 +4,38 @@ import NavBar from "./components/NavBar";
 import Search from "./components/Search";
 import HighRate from "./components/highRate";
 import { usePathname } from "next/navigation";
-import { useState,useEffect } from "react";
+import { useState, useEffect } from "react";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
 
   const pathname = usePathname();
-  
-  useEffect(() => {
-  const backendConnect = async () => {
-    try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/connect`);
-      const data = await response.json();
 
-      if (data === "connected") {
+  useEffect(() => {
+    const backendConnect = async () => {
+      try {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/connect`);
+        const data = await response.json();
+
+        if (data === "connected") {
+          setLoading(false);
+        }
+      } catch (error) {
+        console.error("Connection failed:", error);
         setLoading(false);
       }
-    } catch (error) {
-      console.error("Connection failed:", error);
-      setLoading(false);
-    }
-  };
-  backendConnect();
+    };
+    backendConnect();
   }, []);
 
   if (loading) {
-    return <div className={styles.loadScreen}>a few second until the server wake up</div>
+    return (
+      <div>
+        <div className={styles.loadScreen}>a few second until the server wake up</div>
+        <div class="spinner"></div>
+      </div>
+    )
+
   }
 
   return (

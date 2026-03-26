@@ -55,7 +55,7 @@ export default function Home() {
 
             <Search />
           </div>
-          <HighRate />
+          <HighRate className={styles.bestRecom} />
         </section>
 
         <div className={styles.spacer}>

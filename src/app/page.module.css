@@ -1,7 +1,12 @@
+body {
+  margin: 0;
+}
+
 .page {
-  
+  background: #f5f5f7;
   font-family: sans-serif;
   direction: rtl;
+  overflow-x: hidden;
 
 }
 
@@ -16,12 +21,14 @@
   justify-content: center;
   align-items: center;
 
-  background: rgba(255, 255, 255, 0.2);  
-  color: #333;            
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
+  color: #333;
   font-size: 1.5rem;
   font-weight: 500;
 
-  z-index: 9999;           /* stays above everything */
+  z-index: 9999;
+  /* stays above everything */
 }
 
 .main {
@@ -109,7 +116,7 @@
   font-size: 1.4rem;
   font-weight: 700;
   margin-bottom: 40px;
-   color: #555;
+  color: #555;
 }
 
 .subtitle {
@@ -129,14 +136,14 @@
   padding: 25px;
   border-radius: 14px;
   border: 1px solid #ff6b35;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: 0.2s ease;
 }
 
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
 .card h3 {
@@ -150,7 +157,7 @@
   line-height: 1.6;
 }
 
-.hh{
+.hh {
   height: 400px;
   width: 200px;
 }
@@ -187,7 +194,7 @@
   padding: 25px;
   border-radius: 14px;
   border: 1px solid #ff6b35;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .text {
@@ -211,7 +218,7 @@
 }
 
 .footerContainer {
-  
+
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -272,3 +279,85 @@
   font-size: 0.95rem;
 }
 
+@media (max-width: 768px) {
+
+  /* כללי */
+  .main {
+    padding: 1rem;
+  }
+
+  /* HERO */
+  .hero {
+    grid-template-columns: 1fr; /* במקום 2 עמודות */
+    gap: 1.5rem;
+  }
+
+  .heroText h1 {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
+  .heroTags {
+    flex-wrap: wrap; /* שלא יברח מהמסך */
+    gap: 0.5rem;
+  }
+
+  .tag {
+    font-size: 0.85rem;
+  }
+
+  /* אם יש קומפוננטה בצד (HighRate) */
+  .bestRecom {
+    order: -1; /* שיעלה למעלה */
+  }
+
+  /* FEATURES */
+  .featuresSection {
+    padding: 40px 15px;
+  }
+
+  .title {
+    font-size: 1.3rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr; /* כרטיס אחד בשורה */
+    gap: 15px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  /* REVIEWS */
+  .reviewsSection {
+    padding: 40px 15px;
+  }
+
+  .reviewCard {
+    padding: 18px;
+  }
+
+  .text {
+    font-size: 0.95rem;
+  }
+
+  /* FOOTER */
+  .footerContainer {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .logoArea {
+    text-align: center;
+  }
+
+  /* SPACING */
+  .spacer {
+    height: 20px;
+  }
+
+  .spacer2 {
+    height: 40px;
+  }
+}

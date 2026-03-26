@@ -24,17 +24,16 @@ export default function TripPage() {
     fetchTrips();
   }, []);
 
-  if (loading) {
-    return (
-      <div>
-        <h2 className={styles.loadScreen}>loading...</h2>
-      </div>
-    );
-  }
 
   return (
     <div className={styles.page}>
       <NavBar />
+      {loading && (
+        <div>
+          <h2 className={styles.loadScreen}>loading...</h2>
+        </div>
+      )}
+
       <h1 className={styles.title}>הטיולים הכי נפוצות בארץ</h1>
       <TripList trips={trips} />
     </div>

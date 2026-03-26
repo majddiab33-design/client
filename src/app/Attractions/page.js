@@ -24,17 +24,16 @@ export default function AttractionPage() {
     fetchAttractions();
   }, []);
 
-  if (loading) {
-    return (
-      <div>
-        <h2 className={styles.loadScreen}>loading...</h2>
-      </div>
-    );
-  }
 
   return (
     <div className={styles.page}>
       <NavBar />
+      {loading && (
+        <div>
+          <h2 className={styles.loadScreen}>loading...</h2>
+        </div>
+      )}
+
       <h1 className={styles.title}>האטרקציות הכי נפוצות בארץ</h1>
       <AttractionsList attractions={attractions} />
     </div>

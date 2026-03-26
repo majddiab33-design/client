@@ -4,8 +4,11 @@ import { use } from "react";
 import styles from "./page.module.css";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
+
 
 export default function cardPage({ params }) {
+    const router = useRouter();
     const pathname = usePathname();
     const { id } = use(params);  // <-- unwrap the Promise
 
@@ -45,10 +48,12 @@ export default function cardPage({ params }) {
     return (
         <div className={styles.page}>
             <button
-                className={`${styles.backTo} ${pathname === "/Restaurants" ? styles.active : ""}`}
+                className={`${styles.backTo} ${pathname === "/Attractions" ? styles.active : ""}`}
+                onClick={() => router.push("/Attractions")}
             >
                 ➔
             </button>
+
             <h2 className={styles.title}>אטרקציות</h2>
             <h1 className={styles.name}>{cardData.attr_name}</h1>
             <img

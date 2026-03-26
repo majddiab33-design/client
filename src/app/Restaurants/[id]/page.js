@@ -4,9 +4,12 @@ import { use } from "react";
 import styles from "./page.module.css";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { useRouter } from "next/navigation";
+
 
 export default function cardPage({ params }) {
     const pathname = usePathname();
+    const router = useRouter();
     const { id } = use(params);  // <-- unwrap the Promise
 
     const [cardData, setCardData] = useState({
@@ -47,9 +50,11 @@ export default function cardPage({ params }) {
         <div className={styles.page}>
             <button
                 className={`${styles.backTo} ${pathname === "/Restaurants" ? styles.active : ""}`}
+                onClick={() => router.push("/Restaurants")}
             >
                 ➔
             </button>
+
             <h2 className={styles.title}>מסעדות</h2>
             <h1 className={styles.name}>{cardData.res_name}</h1>
             <img

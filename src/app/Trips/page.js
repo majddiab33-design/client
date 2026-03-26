@@ -25,7 +25,7 @@ export default function TripPage() {
   }, []);
 
    if (loading){
-    <div>loading...</div>
+    <div> <h2 className={styles.loadScreen}>loading...</h2></div>
   }
 
   return (

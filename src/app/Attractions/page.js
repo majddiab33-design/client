@@ -7,7 +7,7 @@ import styles from "./page.module.css";
 
 export default function AttractionPage() {
   const [attractions, setAttractions] = useState([]);
-  const [loading,setLoading]= useState(true);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchAttractions() {
@@ -24,8 +24,8 @@ export default function AttractionPage() {
     fetchAttractions();
   }, []);
 
-  if (loading){
-    <div>loading...</div>
+  if (loading) {
+    <div> <h2 className={styles.loadScreen}>loading...</h2></div>
   }
 
   return (

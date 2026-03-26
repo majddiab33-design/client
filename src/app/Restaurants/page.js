@@ -7,7 +7,7 @@ import styles from "./page.module.css";
 
 export default function RestaurantPage() {
   const [restaurants, setRestaurants] = useState([]);
-  const [loading,setLoading]= useState(true);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchRestaurants() {
@@ -24,8 +24,8 @@ export default function RestaurantPage() {
     fetchRestaurants();
   }, []);
 
-   if (loading){
-    <div>loading...</div>
+  if (loading) {
+    <div> <h2 className={styles.loadScreen}>loading...</h2></div>
   }
 
   return (

@@ -1,3 +1,4 @@
+/* ================= HEADER ================= */
 .header {
   position: sticky;
   top: 0;
@@ -7,6 +8,7 @@
   z-index: 1000;
 }
 
+/* ================= NAV ================= */
 .nav {
   position: relative;
   display: grid;
@@ -15,7 +17,7 @@
   padding: 1rem 2rem;
 }
 
-/* לוגו */
+/* -------- LOGO -------- */
 .logo {
   display: flex;
   gap: 0.4rem;
@@ -33,7 +35,7 @@
   color: white;
 }
 
-/* קישורים */
+/* -------- LINKS -------- */
 .navLinks {
   display: flex;
   gap: 1rem;
@@ -42,6 +44,7 @@
 .navLinks a {
   color: #777;
   cursor: pointer;
+  transition: 0.2s;
 }
 
 .navLinks a:hover {
@@ -53,7 +56,7 @@
   border-bottom: 2px solid #ff6b35;
 }
 
-/* כפתורים */
+/* -------- CTA BUTTONS -------- */
 .navCta {
   position: absolute;
   left: 30px;
@@ -76,17 +79,18 @@
   border-radius: 20px;
 }
 
-/* כפתור מובייל */
+/* -------- MOBILE MENU BUTTON -------- */
 .mobileMenuBtn {
   display: none;
   font-size: 1.5rem;
   cursor: pointer;
 }
 
+/* -------- MOBILE MENU -------- */
 .mobileMenu {
   display: flex;
   align-items: center;
-  gap: 1rem; /* במקום 7rem */
+  gap: 1rem;
 }
 
 /* ================= MOBILE ================= */
@@ -95,6 +99,11 @@
   .nav {
     grid-template-columns: auto 1fr auto;
     padding: 0.8rem 1rem;
+  }
+
+  .logo {
+    position: absolute;
+    left: 3px;
   }
 
   .mobileMenuBtn {
@@ -119,6 +128,7 @@
     pointer-events: none;
 
     transition: all 0.3s ease;
+    z-index: 999; /* חשוב למניעת חפיפה */
   }
 
   .mobileMenu.open {
@@ -144,6 +154,7 @@
     flex-direction: column;
     width: 100%;
     gap: 0.5rem;
+    position: static; /* תיקון חשוב */
   }
 
   .btnPrimary,

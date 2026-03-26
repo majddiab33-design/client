@@ -94,3 +94,61 @@
   margin-bottom: 6px;
   font-size: 0.95rem;
 }
+
+/* --- התאמות למובייל --- */
+@media (max-width: 768px) {
+
+  .page {
+    width: 95%;
+    margin: 20px auto;
+    padding: 15px;
+    height: auto; /* חשוב! */
+    display: block; /* במקום grid */
+  }
+
+  .backTo {
+    padding: 10px 15px;
+    font-size: 20px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .title {
+    margin: 0 auto 10px auto;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .name {
+    position: static; /* לא absolute */
+    margin: 10px 0;
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .image {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .rate {
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 15px;
+    padding: 12px;
+  }
+
+  .hoursSection {
+    padding: 12px;
+  }
+
+  .hoursItem {
+    font-size: 0.9rem;
+  }
+}

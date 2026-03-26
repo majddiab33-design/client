@@ -35,7 +35,6 @@
 }
 
 .navLinks {
-  margin: 0px;
   display: flex;
   gap: 1rem;
 }
@@ -55,7 +54,8 @@
 }
 
 .navCta {
-  margin-inline-start: auto;
+  display: flex;
+  gap: 0.6rem;
 }
 
 .btnPrimary {
@@ -89,7 +89,6 @@
   flex: 1;              /* 👈 הכי חשוב */
   justify-content: center; /* 👈 ממקם באמצע */
 }
-
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
 

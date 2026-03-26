@@ -35,7 +35,7 @@
 }
 
 .navLinks {
-  margin-left: 25px;
+  margin: 0 auto;
   display: flex;
   gap: 1rem;
 }
@@ -55,6 +55,7 @@
 }
 
 .navCta {
+  margin-left: auto;
   display: flex;
   gap: 0.6rem;
 }
@@ -86,11 +87,7 @@
 .mobileMenu {
   display: flex;
   align-items: center;
-  gap: 1rem;
   flex: 1;
-  /* 👈 הכי חשוב */
-  justify-content: center;
-  /* 👈 ממקם באמצע */
 }
 
 /* ================= MOBILE ================= */

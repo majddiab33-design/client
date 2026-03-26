@@ -7,6 +7,7 @@ import styles from "./page.module.css";
 
 export default function RestaurantPage() {
   const [restaurants, setRestaurants] = useState([]);
+  const [loading,setLoading]= useState(true);
 
   useEffect(() => {
     async function fetchRestaurants() {
@@ -14,6 +15,7 @@ export default function RestaurantPage() {
         const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/restaurant`);
         const data = await response.json();
         console.log(data);
+        setLoading(false);
         setRestaurants(data);
       } catch (error) {
         console.error("Error fetching restaurants:", error);
@@ -21,6 +23,10 @@ export default function RestaurantPage() {
     }
     fetchRestaurants();
   }, []);
+
+   if (loading){
+    <div>loading...</div>
+  }
 
   return (
     <div className={styles.page}>

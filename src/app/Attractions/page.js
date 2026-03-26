@@ -7,12 +7,14 @@ import styles from "./page.module.css";
 
 export default function AttractionPage() {
   const [attractions, setAttractions] = useState([]);
+  const [loading,setLoading]= useState(true);
 
   useEffect(() => {
     async function fetchAttractions() {
       try {
         const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/attraction`);
         const data = await response.json();
+        setLoading(flase);
         console.log(data);
         setAttractions(data);
       } catch (error) {
@@ -21,6 +23,10 @@ export default function AttractionPage() {
     }
     fetchAttractions();
   }, []);
+
+  if (loading){
+    <div>loading...</div>
+  }
 
   return (
     <div className={styles.page}>

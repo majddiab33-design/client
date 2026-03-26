@@ -7,12 +7,14 @@ import styles from "./page.module.css";
 
 export default function TripPage() {
   const [trips, setTrips] = useState([]);
+  const [loading,setLoading]= useState(true);
 
   useEffect(() => {
     async function fetchTrips() {
       try {
         const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/trip`);
         const data = await response.json();
+        setLoading(false);
         console.log(data);
         setTrips(data);
       } catch (error) {
@@ -21,6 +23,10 @@ export default function TripPage() {
     }
     fetchTrips();
   }, []);
+
+   if (loading){
+    <div>loading...</div>
+  }
 
   return (
     <div className={styles.page}>

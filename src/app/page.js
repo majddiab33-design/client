@@ -4,11 +4,36 @@ import NavBar from "./components/NavBar";
 import Search from "./components/Search";
 import HighRate from "./components/highRate";
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 
 export default function Home() {
+  backendConnect;
+  const [loading, setLoading] = useState(true);
+
   console.log("API URL:", process.env.NEXT_PUBLIC_API_URL);
   const pathname = usePathname();
+
+  const backendConnect = async () => {
+    try {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/connect`);
+      const data = await response.json();
+
+      if (data === "connected") {
+        setLoading(false);
+      }
+    } catch (error) {
+      console.error("Connection failed:", error);
+      setLoading(false);
+      return null;
+    }
+  };
+
+  if (loading) {
+    return <div className={styles.loadScreen}>a few second until the server wake up</div>
+  }
+
   return (
+
     <div style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }} className={styles.page}>
       <NavBar />
 
@@ -123,7 +148,7 @@ export default function Home() {
                   <a href="/Restaurants" className={pathname === "/Restaurants" ? styles.active : ""}>מסעדות</a>
                 </li>
                 <li>
-                   <a href="/Attractions" className={pathname === "/Attractions" ? styles.active : ""}>אטרקציות</a>
+                  <a href="/Attractions" className={pathname === "/Attractions" ? styles.active : ""}>אטרקציות</a>
                 </li>
                 <li>
                   <a href="/Trips" className={pathname === "/Trips" ? styles.active : ""}>טיולים</a>

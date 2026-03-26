@@ -44,6 +44,7 @@ export default function cardPage({ params }) {
 
     return (
         <div className={styles.page}>
+            <button className={styles.backTo}>➔</button>
             <h2 className={styles.title}>מסעדות</h2>
             <h1 className={styles.name}>{cardData.res_name}</h1>
             <img

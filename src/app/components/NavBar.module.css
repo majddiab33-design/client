@@ -71,30 +71,32 @@
   border-radius: 20px;
 }
 
-/* כפתור המבורגר */
-.mobileMenuBtn {
-  display: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-}
-
-/* תפריט במובייל */
-.mobileMenu {
-  display: none;
-  flex-direction: column;
-  gap: 1rem;
-  background: rgba(245, 245, 247, 0.95);
-  padding: 1rem;
-  border-top: 1px solid #ddd;
-}
-
-/* כשהתפריט פתוח */
-.open {
-  display: flex;
-}
 
 /* התאמות למסכים קטנים */
 @media (max-width: 768px) {
+
+  /* כפתור המבורגר */
+  .mobileMenuBtn {
+    display: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  /* תפריט במובייל */
+  .mobileMenu {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    background: rgba(245, 245, 247, 0.95);
+    padding: 1rem;
+    border-top: 1px solid #ddd;
+  }
+
+  /* כשהתפריט פתוח */
+  .open {
+    display: flex;
+  }
+
   .nav {
     flex-direction: row;
     justify-content: space-between;
@@ -102,10 +104,12 @@
 
   .navLinks,
   .navCta {
-    display: none; /* מסתיר את התפריט הרגיל */
+    display: none;
+    /* מסתיר את התפריט הרגיל */
   }
 
   .mobileMenuBtn {
-    display: block; /* מציג את ההמבורגר */
+    display: block;
+    /* מציג את ההמבורגר */
   }
 }

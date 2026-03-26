@@ -4,8 +4,7 @@
   background: rgba(245, 245, 247, 0.9);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid #ddd;
-  z-index: 1000;
-
+  z-index: 1000 ;
 }
 
 .nav {
@@ -14,7 +13,7 @@
   padding: 0.8rem 1.5rem;
   display: flex;
   justify-content: space-between;
-  align-items: center !important;
+  align-items: center;
 }
 
 .logo {
@@ -35,7 +34,6 @@
 }
 
 .navLinks {
-  margin: 0 auto;
   display: flex;
   gap: 1rem;
 }
@@ -55,7 +53,6 @@
 }
 
 .navCta {
-  margin-left: 30px;
   display: flex;
   gap: 0.6rem;
 }
@@ -75,7 +72,6 @@
   border-radius: 20px;
 }
 
-
 /* כפתור מובייל */
 .mobileMenuBtn {
   display: none;
@@ -84,7 +80,7 @@
 }
 
 /* תפריט מובייל */
-.navLinks , .navCta {
+.mobileMenu {
   display: flex;
   align-items: center;
   flex: 1;

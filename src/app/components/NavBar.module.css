@@ -35,6 +35,7 @@
 }
 
 .navLinks {
+  margin-left: 25px;
   display: flex;
   gap: 1rem;
 }
@@ -86,9 +87,12 @@
   display: flex;
   align-items: center;
   gap: 1rem;
-  flex: 1;              /* 👈 הכי חשוב */
-  justify-content: center; /* 👈 ממקם באמצע */
+  flex: 1;
+  /* 👈 הכי חשוב */
+  justify-content: center;
+  /* 👈 ממקם באמצע */
 }
+
 /* ================= MOBILE ================= */
 @media (max-width: 768px) {
 
@@ -133,7 +137,7 @@
   .navLinks {
     flex-direction: column;
     width: 100%;
-    gap: 0.8rem;
+    gap: 1.2rem;
   }
 
   .navLinks a {

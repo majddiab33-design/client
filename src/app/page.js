@@ -32,7 +32,7 @@ export default function Home() {
     return (
       <div className={styles.loadScreen}>
         <div className={styles.loaderContent}>
-          <p>Loading, please wait...</p>
+          <p>Backend may take a few seconds to wake up (Render free tier), please wait...</p>
           <div className={styles.spinner}></div>
         </div>
       </div>

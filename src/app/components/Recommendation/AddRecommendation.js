@@ -39,7 +39,7 @@ export default function AddRecommendation({isLoggedIn}) {
         res_name: formData.name,
         res_rate: formData.rate,
         res_description: formData.description,
-        res_image: formData.image || "https://placehold.co/400",
+        res_image: formData.image || "/defaultImg.png",
       };
     }
 
@@ -48,7 +48,7 @@ export default function AddRecommendation({isLoggedIn}) {
         attr_name: formData.name,
         attr_rate: formData.rate,
         attr_description: formData.description,
-        attr_image: formData.image || "https://placehold.co/400",
+        attr_image: formData.image || "/defaultImg.png",
       };
     }
 
@@ -57,7 +57,7 @@ export default function AddRecommendation({isLoggedIn}) {
         trip_name: formData.name,
         trip_rate: formData.rate,
         trip_description: formData.description,
-        trip_image: formData.image || "https://placehold.co/400",
+        trip_image: formData.image || "/defaultImg.png",
       };
     }
 
